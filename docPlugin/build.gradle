@@ -5,8 +5,8 @@ plugins {
     id 'kotlin'
     id 'org.jetbrains.kotlin.jvm'
     id 'groovy'
+    id 'maven-publish'
 }
-
 
 dependencies {
     implementation gradleApi()
@@ -14,7 +14,9 @@ dependencies {
     implementation 'com.android.tools.build:gradle:4.1.2', {
         exclude group:'org.ow2.asm'
     }
+    implementation files('libs/tools.jar')
     implementation 'com.alibaba:fastjson:1.2.76'
+
 }
 
 
