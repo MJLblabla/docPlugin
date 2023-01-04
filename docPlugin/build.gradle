@@ -20,3 +20,18 @@ dependencies {
 }
 
 
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.qncube.docbuider'
+                artifactId = 'docBuiderPlugin'
+                version = '1.0'
+                from components.java
+            }
+        }
+
+    }
+}
+
